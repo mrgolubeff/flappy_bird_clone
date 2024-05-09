@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck1inf618euid"]
+[gd_scene load_steps=5 format=3 uid="uid://ck1inf618euid"]
 
 [ext_resource type="Texture2D" uid="uid://cruljd2gbwt0" path="res://assets/bg.png" id="1_mj5dj"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_w0tnh"]
 [ext_resource type="PackedScene" uid="uid://baunr3chvkr1n" path="res://scenes/bird.tscn" id="3_rlty4"]
+[ext_resource type="PackedScene" uid="uid://cjuafb1ft341d" path="res://scenes/ground.tscn" id="4_h0hos"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_w0tnh")
@@ -12,3 +13,5 @@ position = Vector2(432, 384)
 texture = ExtResource("1_mj5dj")
 
 [node name="Bird" parent="." instance=ExtResource("3_rlty4")]
+
+[node name="Ground" parent="." instance=ExtResource("4_h0hos")]
