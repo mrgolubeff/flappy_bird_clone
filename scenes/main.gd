@@ -6,7 +6,7 @@ var game_running : bool
 var game_over : bool
 var scroll
 var score
-const SCROLL_SPEED : int = 140
+const SCROLL_SPEED : int = 200
 var screen_size : Vector2i
 var ground_height : int
 var pipes : Array
