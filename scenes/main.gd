@@ -24,6 +24,8 @@ func new_game():
 	game_over = false
 	score = 0
 	$ScoreLabel.text = "SCORE: " + str(score)
+	$GameOver.hide()
+	get_tree().call_group("pipes", "queue_free")
 	scroll = 0
 	pipes.clear()
 	generate_pipes()
@@ -83,6 +85,7 @@ func stop_game():
 	$Bird.flying = false
 	game_running = false
 	game_over = true
+	$GameOver.show()
 
 func bird_hit():
 	$Bird.falling = true
@@ -91,3 +94,6 @@ func bird_hit():
 func _on_ground_hit():
 	$Bird.falling = false
 	stop_game()
+
+func _on_game_over_restart():
+	new_game()
